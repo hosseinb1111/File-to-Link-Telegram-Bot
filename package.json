@@ -1,0 +1,19 @@
+{
+  "name": "file-link-bot",
+  "version": "1.0.2",
+  "private": true,
+  "description": "Telegram bot and web uploader that creates expiring download links, stored in Backblaze B2",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "db:init": "wrangler d1 execute file-links --remote --file=./schema.sql"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "s3mini": "latest"
+  },
+  "devDependencies": {
+    "wrangler": "latest"
+  }
+}
